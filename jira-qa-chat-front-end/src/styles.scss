@@ -1,0 +1,12 @@
+@import "typography";
+@import "colors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body_color;
+  font-family: $body-font-family;
+  font-size: $base-font-size;
+}

@@ -1,0 +1,53 @@
+@import "colors";
+@import "variables";
+@import "mixins";
+
+:host {
+  display: block;
+  width: 100%;
+  .chat-container {
+    @include flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: $default-padding;
+    background-color: $light-color;
+    border-radius: $default-radius;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .chat-message {
+    .question {
+      margin-bottom: $small-margin;
+    }
+    .answer {
+      padding-left: $default-padding;
+    }
+    margin-bottom: $default-margin;
+  }
+
+  .input-field {
+    width: 100%;
+    @include flex(row);
+    position: relative;
+    align-items: center;
+    input {
+      width: 100%;
+      height: 3rem;
+      border: 0.5px solid $default-color;
+      border-radius: $default-radius;
+      font-size: 1.2rem;
+      padding: 0 $default-padding * 5 0 $default-padding;
+    }
+    .button {
+      position: absolute;
+      height: 2rem;
+      margin: 0 $small-margin;
+      right: 0;
+      width: $default-padding * 4;
+      border: none;
+      border-radius: $default-radius;
+      background-color: $color_3;
+      color: $light-color;
+    }
+  }
+}

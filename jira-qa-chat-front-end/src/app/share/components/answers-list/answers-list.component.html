@@ -1,0 +1,42 @@
+<div class="chat-container">
+  <div *ngFor="let message of messages" class="chat-message">
+    <br>
+    <div class="question">{{ message.question }}</div>
+    <br>
+    <div class="answer">{{ message.answer }}</div>
+
+    <div class="toggle-documents" (click)="toggleDocuments(message)">
+      <br>
+      <u> <strong>+ Click to see the sources used for this answer</strong> </u>
+      <br>
+    </div>
+      <div class="documents" *ngIf="message.showDocuments">
+        <br>
+        <strong>Documents</strong>
+        <br>
+        <ul>
+          <li *ngFor="let doc of message.documents">
+            <div class="doc-header">{{ doc.page_content }}</div>
+            <div class="doc-metadata">
+              Source: <span class="doc-metadata-source">{{ doc.metadata.source }}</span>,
+              Row: <span class="doc-metadata-row">{{ doc.metadata.row }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="answer" *ngIf="isLoading">
+    <span>Loading...</span>
+  </div>
+
+  <div class="input-field">
+    <input
+      type="text"
+      [(ngModel)]="inputText"
+      (keyup.enter)="submitRequest()"
+      placeholder="Enter your question"
+    />
+    <button class="button" (click)="submitRequest()">Send</button>
+  </div>
+</div>

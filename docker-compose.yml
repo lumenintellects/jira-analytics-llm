@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jira-qa-chat-service:
+    image: jira-qa-chat-service:latest
+    ports:
+      - 8000:8000
+
+  ai-chat-front-end:
+    image: jira-qa-chat-front-end:latest
+    ports:
+      - 4200:80

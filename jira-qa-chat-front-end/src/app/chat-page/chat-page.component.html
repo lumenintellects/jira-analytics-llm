@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="chat-rfp-label">Jira QA Chat</h1>
+  <answers-list
+    [isLoading]="loading"
+    [messages]="messages"
+    (onSend)="submitRequest($event)">
+  </answers-list>
+</div>

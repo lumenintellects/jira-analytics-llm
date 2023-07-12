@@ -1,0 +1,17 @@
+@import "colors";
+@import "variables";
+@import "mixins";
+
+:host {
+  display: block;
+  width: 100%;
+  .container {
+    @include flex;
+
+    .chat-rfp-label {
+      font-weight: bold;
+      color: $default-color;
+      text-align: center;
+    }
+  }
+}

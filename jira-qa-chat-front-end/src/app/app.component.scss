@@ -1,0 +1,15 @@
+@import "colors";
+@import "variables";
+@import "mixins";
+
+:host {
+  .container {
+    @include flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: $default-padding;
+    background-color: $light-color;
+    border-radius: $default-radius;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
