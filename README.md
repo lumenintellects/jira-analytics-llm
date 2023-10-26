@@ -1,6 +1,6 @@
-# jira-qa-analytics-llm
+# jira-analytics-llm
 
-By combining the OpenAI API, LangChain, and a user-friendly interface, this solution enables quality assurance personnel to efficiently retrieve answers to their questions about Jira bug reports. It streamlines the interaction with the language model while prioritizing usability and ease of use.
+By combining the OpenAI API, LangChain, and a user-friendly interface, this solution enables personnel to efficiently retrieve answers to their questions about Jira bug reports. It streamlines the interaction with the language model while prioritizing usability and ease of use.
 
 ## Quick start
 
